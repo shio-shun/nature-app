@@ -23,8 +23,29 @@ st.markdown("""
 
 st.markdown("<div class='title-style'>🌿 福岡自然観光スポットルートナビ</div>", unsafe_allow_html=True)
 
-# スポットデータ
-... # スポットデータ定義部（省略：変更なし）
+# スポットデータ（元の20件フルデータ）
+data = [
+    ["大濠公園", 33.5833, 130.3833, "https://www.ohorikouen.jp/", "約1時間"],
+    ["舞鶴公園", 33.5839, 130.3831, "https://www.midorimachi.jp/maiduru/", "約1時間"],
+    ["福岡市植物園", 33.5708, 130.3894, "https://botanical-garden.city.fukuoka.lg.jp/", "約1.5時間"],
+    ["能古島アイランドパーク", 33.6167, 130.2833, "https://nokonoshima.com/", "約2時間"],
+    ["志賀島", 33.7000, 130.3833, "https://www.crossroadfukuoka.jp/spot/12747", "約2時間"],
+    ["福岡タワー", 33.5950, 130.3519, "https://www.fukuokatower.co.jp/", "約1時間"],
+    ["西公園", 33.5900, 130.3750, "https://www.midorimachi.jp/nishikouen/", "約1時間"],
+    ["福岡市博物館", 33.5950, 130.3519, "https://museum.city.fukuoka.jp/", "約1.5時間"],
+    ["シーサイドももち海浜公園", 33.5950, 130.3519, "https://www.momochi-seaside.com/", "約1.5時間"],
+    ["野河内渓谷", 33.5833, 130.3333, "https://tripnote.jp/fukuoka-shi/place-nogouchi-keikoku", "約1.5時間"],
+    ["油山自然観察の森", 33.5333, 130.3333, "https://www.city.fukuoka.lg.jp/jonanku/yusuiyama/", "約2時間"],
+    ["海の中道海浜公園", 33.6833, 130.3833, "https://uminaka-park.jp/", "約3時間"],
+    ["貝塚公園", 33.6161, 130.4431, "https://www.city.fukuoka.lg.jp/higashiku/seikatsukankyo/life/kaizuka-park.html", "約1時間"],
+    ["鴻臚館跡展示館", 33.5839, 130.3831, "https://fukuokajyo.com/", "約1時間"],
+    ["福岡城跡", 33.5835, 130.3835, "https://fukuokajyo.com/", "約1時間"],
+    ["南公園展望台", 33.5700, 130.3890, "https://www.city.fukuoka.lg.jp/", "約1時間"],
+    ["香椎花園跡地", 33.6658, 130.4433, "https://kashiikaen.com/", "約1.5時間"],
+    ["三日月山", 33.6836, 130.4417, "https://yamaiko.com/fukuoka/mikadukiyama", "約2時間"],
+    ["皿山公園", 33.5517, 130.3644, "https://www.city.fukuoka.lg.jp/sawaraku/shimin-center/saraya-park.html", "約1時間"],
+    ["若杉山", 33.6400, 130.5400, "https://www.crossroadfukuoka.jp/spot/12534", "約2.5時間"]
+]
 
 # データフレーム生成
 df = pd.DataFrame(data, columns=["スポット名", "緯度", "経度", "公式サイト", "所要時間"])
